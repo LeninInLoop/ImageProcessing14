@@ -21,7 +21,7 @@ class ImageUtils:
 
     @staticmethod
     def perform_thresholding(image: np.ndarray, threshold: float) -> np.ndarray:
-        return np.where(image > threshold, 255, 0)
+        return np.where(image > threshold, 1, 0).astype(np.bool_)
 
     @staticmethod
     def convert_to_gray_scale(image: np.ndarray) -> np.ndarray:
